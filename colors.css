@@ -1,0 +1,55 @@
+#dialog .f2 .triangle-border {
+  border-color:blue;
+}
+
+#dialog .f2 .triangle-border:before{
+  border-color:transparent blue;
+}
+
+#dialog .f3 .triangle-border {
+  border-color: purple;
+}
+
+#dialog .f3 .triangle-border:before{
+  border-color:transparent purple;
+}
+
+#dialog .f4 .triangle-border {
+  border-color: green;
+}
+
+#dialog .f4 .triangle-border:before{
+  border-color:transparent green;
+}
+
+#dialog .f5 .triangle-border {
+  border-color: #36A9D8;
+}
+
+#dialog .f5 .triangle-border:before{
+  border-color:transparent #36A9D8;
+}
+
+#dialog .f6 .triangle-border {
+  border-color: purple;
+}
+
+#dialog .f6 .triangle-border:before{
+  border-color:transparent purple;
+}
+
+#dialog .f7 .triangle-border {
+  border-color: #aa3311;
+}
+
+#dialog .f7 .triangle-border:before{
+  border-color:transparent #aa3311;
+}
+
+#dialog .f8 .triangle-border {
+  border-color: #36A9D8;
+}
+
+#dialog .f8 .triangle-border:before{
+  border-color:transparent #36A9D8;
+}

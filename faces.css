@@ -1,0 +1,55 @@
+.face {
+  width: 96px;
+  height: 96px;
+  overflow:hidden;
+  background-image: url("faces/vxface02.png")
+}
+
+.f1 .face{
+  background-offset: 0 0;
+}
+
+.f2 .face {
+  background-position: 96px 0;
+}
+
+.f3 .face {
+  background-position: 192px 0;
+}
+
+.f4 .face {
+  background-position: 288px 0;
+}
+
+.f5 .face{
+  background-offset: 0 96px;
+}
+
+.f6 .face {
+  background-position: 96px 96px;
+}
+
+.f7 .face {
+  background-position: 192px 96px;
+}
+
+.f8 .face {
+  background-position: 288px 96px;
+}
+
+.right .face{
+  float: right;
+}
+
+.left .face{
+  float: left;
+}
+
+.row{
+  clear: both;
+  width:650px;
+}
+
+#dialog p {
+  margin: 20px 120px;
+}
