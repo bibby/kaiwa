@@ -1,8 +1,24 @@
+body {
+  background-color: #EEE;
+}
+
+#dialog {
+  padding: 5px 20px;
+}
+
+.triangle-obtuse {
+  font-family: Arial;
+  text-align: center;
+  font-size: 1.2em;
+}
+
 .face {
   width: 96px;
   height: 96px;
   overflow:hidden;
-  background-image: url("faces/vxface02.png")
+  background-image: url("../faces/vxface02.png");
+  border: 2px solid #444;
+  border-radius: 4px;
 }
 
 .f1 .face{
@@ -22,7 +38,7 @@
 }
 
 .f5 .face{
-  background-offset: 0 96px;
+  background-position: 0 96px;
 }
 
 .f6 .face {

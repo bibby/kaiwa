@@ -1,49 +1,25 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="bubbles.css"/>
-    <link rel="stylesheet" href="faces.css"/>
-    <link rel="stylesheet" href="colors.css"/>
+    <link rel="stylesheet" href="css/bubbles.css"/>
+    <link rel="stylesheet" href="css/faces.css"/>
+    <link rel="stylesheet" href="css/colors.css"/>
   </head>
   <body>
-    <div id="dialog">
-      <div class="row">
-        <p class="triangle-obtuse top">
-          Starto desu
-        </p>
-      </div>
+    <div id="dialog"></div>
 
-      <div class="row f4 left">
-        <div class="face"></div>
-        <p class="triangle-border">
-          Hello testing 123
-        </p>
-      </div>
-
-      <div class="row f8 right">
-        <div class="face"></div>
-        <p class="triangle-border">
-          はじめまして。
-        </p>
-      </div>
-
-
-      <div class="row f6 left">
-        <div class="face"></div>
-        <p class="triangle-border">
-          Hello testing 123
-        </p>
-      </div>
-
-      <div class="row f7 right">
-        <div class="face"></div>
-        <p class="triangle-border">
-          はじめまして。
-        </p>
-      </div>
-
-
-
-    </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="js/dialog.js"></script>
+    <script type="text/javascript">
+    var kaiwa = new Kaiwa();
+    kaiwa.nar("Dialog Practice");
+    kaiwa.sayAll([
+      [Yui, "ユートさん、練習しましょうか。"],
+      [Yuuto, "いいね。さぁ、始めよう。", "きょうは、何をしましたか。"],
+      [Yui, "あのー"],
+      [Hana, "わー！ 私も練習したいな。"],
+      [Yui, "だめだよ！"],
+    ]);
+    </script>
   </body>
 </html>
