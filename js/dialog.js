@@ -56,7 +56,7 @@ Kaiwa.prototype = {
     this.pos = (this.pos + 1) % 2;
     this.draw(char.draw(text, pos));
   },
-  nar: function(text)
+  header: function(text)
   {
     var d = $("<div/>")
       .addClass("row")
