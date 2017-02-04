@@ -4,6 +4,7 @@ body {
 
 #dialog {
   padding: 5px 20px;
+  margin-bottom: 120px;
 }
 
 #dialog-text {
@@ -60,6 +61,10 @@ body {
 
 .right .face{
   float: right;
+}
+
+.right p {
+  text-align: right;
 }
 
 .left .face{
