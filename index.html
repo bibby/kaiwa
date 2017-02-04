@@ -6,20 +6,17 @@
     <link rel="stylesheet" href="css/colors.css"/>
   </head>
   <body>
+    <fieldset>
+      Header <legend>Dialog</legend>
+      <input type="text" id="header" value="Dialog Practice" />
+      <br />
+      Dialog<br />
+    <textarea id="dialog-text"></textarea>
+    </fieldset>
+    <hr />
     <div id="dialog"></div>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="js/dialog.js"></script>
-    <script type="text/javascript">
-    var kaiwa = new Kaiwa();
-    kaiwa.header("Dialog Practice");
-    kaiwa.sayAll([
-      [Yui, "ユートさん、練習しましょうか。"],
-      [Yuuto, "いいですね。さぁ、始めよう。", "きょうは、何をしましたか。"],
-      [Yui, "あのー"],
-      [Hana, "わー！ 私も練習したいな。"],
-      [Yui, "だめだよ！"],
-    ]);
-    </script>
   </body>
 </html>

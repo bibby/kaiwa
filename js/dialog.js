@@ -22,23 +22,72 @@ Char.prototype = {
   }
 };
 
-var Yuko = Char("f1");
-var Akari = Char("f2");
-var Kaito = Char("f3");
-var Hana = Char("f4");
+結子 = ゆこ = Yuko = Char("f1");
+亜伽利 = あかり = Akari = Char("f2");
+介人 = かいと = Kaito = Char("f3");
+英 = はな = Hana = Char("f4");
 
-var Touma = Char("f5");
-var Yui = Char("f6");
-var Yuuto = Char("f7");
-var Kanna = Char("f8");
+顛 = とうま = Touma = Char("f5");
+惟 = ゆい = Yui = Char("f6");
+允人 = まさと = Masato = Char("f7");
+八良 = はちろう = Kanna = Char("f8");
 
 
 var Kaiwa = function()
 {
+  if (false == this instanceof Kaiwa)
+    return new Kaiwa();
+
   this.pos = 1;
 };
 
+
+
 Kaiwa.prototype = {
+  init: function()
+  {
+    var header = trim($("#header").val());
+    if(header)
+      this.header(header);
+
+    var dialog = $("#dialog-text").val();
+    var actor;
+    var lines = [];
+    dialog.split("\n").forEach(function(line)
+    {
+      line = trim(line);
+      if(!line)
+        return;
+
+      var act = undefined;
+      var parts = line.split(/\:\s*/);
+      if(parts.length == 2)
+      {
+        act = get_actor(parts.shift());
+        line = parts.shift();
+        if(act && line)
+        {
+          actor = act;
+          lines.push([actor, line]);
+        }
+      }
+
+      if(!act)
+        lines[lines.length - 1].push(line);
+    });
+
+    this.sayAll(lines);
+    return this;
+  },
+  clear:function()
+  {
+    $("#dialog").empty();
+    return Kaiwa();
+  },
+  rebuild:function()
+  {
+    return this.clear().init();
+  },
   sayAll: function(lst)
   {
     var k = this;
@@ -74,3 +123,24 @@ Kaiwa.prototype = {
     .append(elm);
   }
 };
+
+
+var trim = function(str)
+{
+    return str.toString().replace(/^\s+|\s+$/g, '');
+};
+
+var get_actor = function(act)
+{
+  return window[act] || null;
+};
+
+
+$(function()
+{
+  window.kaiwa = Kaiwa().init();
+  $("#dialog-text, #header").blur(function()
+  {
+    kaiwa.rebuild();
+  })
+});

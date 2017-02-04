@@ -6,6 +6,11 @@ body {
   padding: 5px 20px;
 }
 
+#dialog-text {
+  width: 60%;
+  height: 150px;
+}
+
 .triangle-obtuse {
   font-family: Arial;
   text-align: center;
